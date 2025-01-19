@@ -20,22 +20,6 @@ var isPalindrome = function(x) {
   }
 
 
-//  Question: Given a string, find the shortest possible string which can be achieved by adding characters to the end of the
-//  initial string to make it a palindrome.
-
-//  Time Complexity: O(n²)
-//  Space Complexity: O(n)
-
-function createPalindrome(originalText) {
-  const reversedText = originalText.split('').reverse().join('');
-  for (let matchingPosition = 0; matchingPosition < originalText.length; matchingPosition++) {
-      if (originalText.substring(matchingPosition) === reversedText.substring(0, originalText.length - matchingPosition)) {
-          return originalText + reversedText.substring(originalText.length - matchingPosition);
-      }
-  }
-  return originalText;
-}
-
 
 // Question 3.
 function createPyramid(levels) {
